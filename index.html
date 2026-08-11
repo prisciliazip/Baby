@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Jordan ♡</title>
+
+<style>
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 15%,
+            #fffdfb 0%,
+            #fdf5f3 45%,
+            #f7e9e7 100%
+        );
+
+    color: #624d4b;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background-heart {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+.background-heart span {
+    position: absolute;
+
+    color: #dca8a9;
+
+    opacity: 0.18;
+
+    animation: floatHeart 8s ease-in-out infinite;
+}
+
+.background-heart span:nth-child(1) {
+    top: 15%;
+    left: 8%;
+    font-size: 20px;
+}
+
+.background-heart span:nth-child(2) {
+    top: 25%;
+    right: 10%;
+    font-size: 15px;
+    animation-delay: 2s;
+}
+
+.background-heart span:nth-child(3) {
+    bottom: 20%;
+    left: 12%;
+    font-size: 14px;
+    animation-delay: 4s;
+}
+
+.background-heart span:nth-child(4) {
+    bottom: 30%;
+    right: 15%;
+    font-size: 22px;
+    animation-delay: 1s;
+}
+
+@keyframes floatHeart {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.page {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding:
+        65px 20px 100px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.eyebrow {
+    margin-bottom: 10px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #a47c79;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 0.9s ease 0.2s forwards;
+}
+
+h1 {
+    margin-bottom: 8px;
+
+    color: #604a48;
+
+    font-size:
+        clamp(44px, 9vw, 72px);
+
+    font-weight: normal;
+
+    font-style: italic;
+
+    text-align: center;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 0.9s ease 0.4s forwards;
+}
+
+.subtitle {
+    margin-bottom: 15px;
+
+    color: #a1817e;
+
+    font-size: 14px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    animation:
+        fadeUp 0.9s ease 0.6s forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   BOUQUET CONTAINER
+
+   EVERYTHING IS CENTERED HERE.
+========================================================= */
+
+.bouquet-container {
+    width: min(560px, 96vw);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+
+    opacity: 0;
+
+    animation:
+        bouquetAppear
+        1s
+        ease
+        0.8s
+        forwards;
+}
+
+@keyframes bouquetAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   SVG
+
+   IMPORTANT:
+   VIEWBOX IS SYMMETRICAL:
+   x = 0 to 500
+   CENTER = 250
+
+   EVERYTHING IS BUILT AROUND x = 250.
+========================================================= */
+
+.bouquet-svg {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    overflow: visible;
+}
+
+
+/* =========================================================
+   STEMS
+========================================================= */
+
+.stem {
+    fill: none;
+
+    stroke: #718c70;
+
+    stroke-width: 5;
+
+    stroke-linecap: round;
+
+    stroke-dasharray: 500;
+
+    stroke-dashoffset: 500;
+
+    animation:
+        drawStem
+        1.5s
+        ease
+        1s
+        forwards;
+}
+
+.stem-2 {
+    animation-delay: 1.15s;
+}
+
+.stem-3 {
+    animation-delay: 1.3s;
+}
+
+.stem-4 {
+    animation-delay: 1.45s;
+}
+
+.stem-5 {
+    animation-delay: 1.6s;
+}
+
+@keyframes drawStem {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+/* =========================================================
+   LEAVES
+========================================================= */
+
+.leaf {
+    fill: #8da58a;
+
+    opacity: 0;
+
+    transform-box: fill-box;
+    transform-origin: center;
+
+    animation:
+        leafOpen
+        0.8s
+        ease
+        2s
+        forwards;
+}
+
+.leaf:nth-child(2) {
+    animation-delay: 2.15s;
+}
+
+.leaf:nth-child(3) {
+    animation-delay: 2.3s;
+}
+
+.leaf:nth-child(4) {
+    animation-delay: 2.45s;
+}
+
+.leaf:nth-child(5) {
+    animation-delay: 2.6s;
+}
+
+@keyframes leafOpen {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(-25deg);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+
+/* =========================================================
+   FLOWERS
+
+   ALL FLOWER CENTERS ARE AROUND x = 250.
+
+   CSS DOES NOT CHANGE THEIR POSITION.
+   IT ONLY SCALES THEM.
+
+   This prevents the old off-center problem.
+========================================================= */
+
+.flower {
+    opacity: 0;
+
+    transform-box: fill-box;
+    transform-origin: center;
+
+    animation:
+        bloom
+        1.4s
+        cubic-bezier(.16, 1, .3, 1)
+        forwards;
+}
+
+.flower-main {
+    animation-delay: 2.4s;
+}
+
+.flower-left {
+    animation-delay: 2.75s;
+}
+
+.flower-right {
+    animation-delay: 3.1s;
+}
+
+.flower-small-left {
+    animation-delay: 3.45s;
+}
+
+.flower-small-right {
+    animation-delay: 3.7s;
+}
+
+@keyframes bloom {
+    0% {
+        opacity: 0;
+        transform: scale(0.05);
+    }
+
+    35% {
+        opacity: 1;
+        transform: scale(0.45);
+    }
+
+    65% {
+        transform: scale(1.12);
+    }
+
+    82% {
+        transform: scale(0.94);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================================
+   FLOWER COLORS
+========================================================= */
+
+.pink {
+    fill: #dfa0a7;
+}
+
+.light-pink {
+    fill: #f0c4c7;
+}
+
+.dark-pink {
+    fill: #cd858f;
+}
+
+.pale {
+    fill: #f7dcda;
+}
+
+.center {
+    fill: #e5bf69;
+}
+
+
+/* =========================================================
+   WRAPPING PAPER
+========================================================= */
+
+.wrapper-back {
+    fill: #e7d4cd;
+}
+
+.wrapper-front {
+    fill: #f3e3de;
+}
+
+.ribbon {
+    fill: #c9878c;
+}
+
+.ribbon-light {
+    fill: #d99ca0;
+}
+
+
+/* =========================================================
+   SMALL TEXT
+========================================================= */
+
+.bloom-text {
+    margin-top: -8px;
+
+    color: #a58380;
+
+    font-size: 13px;
+
+    font-style: italic;
+
+    opacity: 0;
+
+    animation:
+        fadeIn
+        1s
+        ease
+        4.4s
+        forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+.envelope-section {
+    margin-top: 35px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    opacity: 0;
+
+    animation:
+        fadeUp
+        1s
+        ease
+        4.8s
+        forwards;
+}
+
+.envelope-label {
+    margin-bottom: 18px;
+
+    color: #9c7673;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.envelope {
+    position: relative;
+
+    width: min(350px, 88vw);
+    height: 220px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.envelope:hover {
+    transform: translateY(-7px);
+}
+
+
+/* =========================================================
+   ENVELOPE BODY
+========================================================= */
+
+.envelope-body {
+    position: absolute;
+
+    inset: 0;
+
+    background: #e6c6c2;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 20px 45px rgba(80, 50, 50, 0.14);
+
+    overflow: hidden;
+}
+
+
+/* envelope diagonal folds */
+
+.envelope-body::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            35deg,
+            transparent 49%,
+            #d5aaa7 50%,
+            transparent 51%
+        ),
+        linear-gradient(
+            -35deg,
+            transparent 49%,
+            #d5aaa7 50%,
+            transparent 51%
+        );
+}
+
+
+/* =========================================================
+   PAPER INSIDE
+========================================================= */
+
+.letter-paper {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 7.5%;
+
+    bottom: 10px;
+
+    width: 85%;
+    height: 155px;
+
+    background: #fffaf7;
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 5px 20px rgba(80, 50, 50, 0.08);
+
+    transition:
+        transform
+        1s
+        cubic-bezier(.2, .7, .2, 1);
+}
+
+
+/* =========================================================
+   FLAP
+========================================================= */
+
+.envelope-flap {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 120px;
+
+    background: #ddb9b5;
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            50% 100%
+        );
+
+    transform-origin: top center;
+
+    transition:
+        transform
+        1s
+        cubic-bezier(.2, .7, .2, 1);
+}
+
+
+/* =========================================================
+   SEAL
+========================================================= */
+
+.seal {
+    position: absolute;
+
+    z-index: 10;
+
+    left: 50%;
+    top: 48%;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #bd777e;
+
+    color: white;
+
+    font-size: 20px;
+
+    transform:
+        translate(-50%, -50%);
+
+    transition:
+        all 0.5s ease;
+}
+
+
+/* =========================================================
+   OPEN ENVELOPE
+========================================================= */
+
+.envelope.open {
+    transform: translateY(20px);
+}
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+}
+
+.envelope.open .letter-paper {
+    transform: translateY(-105px);
+}
+
+.envelope.open .seal {
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.3);
+}
+
+
+/* =========================================================
+   LETTER
+========================================================= */
+
+.letter {
+    width: min(730px, 94vw);
+
+    margin-top: 120px;
+
+    padding:
+        55px
+        clamp(25px, 6vw, 55px);
+
+    background:
+        rgba(255, 255, 255, 0.82);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(100, 70, 70, 0.1);
+
+    opacity: 0;
+
+    transform: translateY(45px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.letter.show {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    pointer-events: auto;
+}
+
+.letter h2 {
+    margin-bottom: 35px;
+
+    color: #624b49;
+
+    font-size: 38px;
+
+    font-weight: normal;
+
+    font-style: italic;
+
+    text-align: center;
+}
+
+.letter p {
+    margin-bottom: 23px;
+
+    color: #6b5755;
+
+    font-size: 16px;
+
+    line-height: 2;
+
+    text-align: left;
+}
+
+.signature {
+    margin-top: 35px;
+
+    color: #896663;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    line-height: 1.8;
+
+    text-align: right;
+}
+
+.close-button {
+    display: block;
+
+    margin:
+        35px
+        auto
+        0;
+
+    padding:
+        10px 22px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #e5c3bf;
+
+    color: #765653;
+
+    font-family: Georgia, serif;
+
+    cursor: pointer;
+
+    transition:
+        all 0.3s ease;
+}
+
+.close-button:hover {
+    background: #d9aaa6;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding-top: 50px;
+    }
+
+    .bouquet-container {
+        width: 100vw;
+
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .bouquet-svg {
+        width: 100%;
+    }
+
+    .bloom-text {
+        margin-top: 0;
+    }
+
+    .envelope {
+        width: 310px;
+        height: 195px;
+    }
+
+    .letter {
+        margin-top: 100px;
+
+        padding:
+            38px
+            23px;
+    }
+
+    .letter h2 {
+        font-size: 30px;
+    }
+
+    .letter p {
+        font-size: 14px;
+        line-height: 1.9;
+    }
+
+    .signature {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 380px) {
+
+    .page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .bouquet-container {
+        width: 105vw;
+        margin-left: -2.5vw;
+    }
+
+    .envelope {
+        width: 280px;
+        height: 180px;
+    }
+
+    .letter {
+        width: 94vw;
+
+        padding:
+            30px
+            19px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background-heart">
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+</div>
+
+
+<main class="page">
+
+
+    <!-- =================================================
+         TITLE
+    ================================================== -->
+
+    <div class="eyebrow">
+        one month with you
+    </div>
+
+    <h1>
+        For Jordan
+    </h1>
+
+    <p class="subtitle">
+        a little something made with love ♡
+    </p>
+
+
+    <!-- =================================================
+         CENTERED BOUQUET
+    ================================================== -->
+
+    <div class="bouquet-container">
+
+        <svg
+            class="bouquet-svg"
+            viewBox="0 0 500 600"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+
+
+            <!-- =========================================
+                 STEMS
+            ========================================== -->
+
+            <path
+                class="stem"
+                d="
+                    M250 500
+                    C220 400 150 300 145 205
+                "
+            />
+
+            <path
+                class="stem stem-2"
+                d="
+                    M250 500
+                    C250 390 250 260 250 150
+                "
+            />
+
+            <path
+                class="stem stem-3"
+                d="
+                    M250 500
+                    C280 400 350 300 355 205
+                "
+            />
+
+            <path
+                class="stem stem-4"
+                d="
+                    M250 500
+                    C225 410 205 340 205 275
+                "
+            />
+
+            <path
+                class="stem stem-5"
+                d="
+                    M250 500
+                    C275 410 295 340 295 275
+                "
+            />
+
+
+            <!-- =========================================
+                 LEAVES
+            ========================================== -->
+
+            <ellipse
+                class="leaf"
+                cx="165"
+                cy="330"
+                rx="19"
+                ry="60"
+                transform="rotate(-42 165 330)"
+            />
+
+            <ellipse
+                class="leaf"
+                cx="335"
+                cy="330"
+                rx="19"
+                ry="60"
+                transform="rotate(42 335 330)"
+            />
+
+            <ellipse
+                class="leaf"
+                cx="190"
+                cy="390"
+                rx="17"
+                ry="55"
+                transform="rotate(-58 190 390)"
+            />
+
+            <ellipse
+                class="leaf"
+                cx="310"
+                cy="390"
+                rx="17"
+                ry="55"
+                transform="rotate(58 310 390)"
+            />
+
+            <ellipse
+                class="leaf"
+                cx="250"
+                cy="350"
+                rx="17"
+                ry="58"
+                transform="rotate(5 250 350)"
+            />
+
+
+            <!-- =========================================
+                 MAIN CENTER FLOWER
+
+                 CENTER = x 250
+                 y 150
+            ========================================== -->
+
+            <g
+                class="flower flower-main"
+                transform="translate(250 150)"
+            >
+
+                <circle
+                    class="light-pink"
+                    cx="0"
+                    cy="-40"
+                    r="34"
+                />
+
+                <circle
+                    class="pink"
+                    cx="38"
+                    cy="-12"
+                    r="34"
+                />
+
+                <circle
+                    class="light-pink"
+                    cx="24"
+                    cy="32"
+                    r="34"
+                />
+
+                <circle
+                    class="pink"
+                    cx="-24"
+                    cy="32"
+                    r="34"
+                />
+
+                <circle
+                    class="light-pink"
+                    cx="-38"
+                    cy="-12"
+                    r="34"
+                />
+
+                <circle
+                    class="center"
+                    cx="0"
+                    cy="0"
+                    r="19"
+                />
+
+            </g>
+
+
+            <!-- =========================================
+                 LEFT FLOWER
+
+                 Center = 145
+                 This is balanced with right flower.
+            ========================================== -->
+
+            <g
+                class="flower flower-left"
+                transform="translate(145 205)"
+            >
+
+                <circle
+                    class="pink"
+                    cx="0"
+                    cy="-34"
+                    r="30"
+                />
+
+                <circle
+                    class="light-pink"
+                    cx="32"
+                    cy="-10"
+                    r="30"
+                />
+
+                <circle
+                    class="pink"
+                    cx="20"
+                    cy="27"
+                    r="30"
+                />
+
+                <circle
+                    class="light-pink"
+                    cx="-20"
+                    cy="27"
+                    r="30"
+                />
+
+                <circle
+                    class="pink"
+                    cx="-32"
+                    cy="-10"
+                    r="30"
+                />
+
+                <circle
+                    class="center"
+                    cx="0"
+                    cy="0"
+                    r="16"
+                />
+
+            </g>
+
+
+            <!-- =========================================
+                 RIGHT FLOWER
+            ========================================== -->
+
+            <g
+                class="flower flower-right"
+                transform="translate(355 205)"
+            >
+
+                <circle
+                    class="dark-pink"
+                    cx="0"
+                    cy="-34"
+                    r="30"
+                />
+
+                <circle
+                    class="pink"
+                    cx="32"
+                    cy="-10"
+                    r="30"
+                />
+
+                <circle
+                    class="dark-pink"
+                    cx="20"
+                    cy="27"
+                    r="30"
+                />
+
+                <circle
+                    class="pink"
+                    cx="-20"
+                    cy="27"
+                    r="30"
+                />
+
+                <circle
+                    class="dark-pink"
+                    cx="-32"
+                    cy="-10"
+                    r="30"
+                />
+
+                <circle
+                    class="center"
+                    cx="0"
+                    cy="0"
+                    r="16"
+                />
+
+            </g>
+
+
+            <!-- =========================================
+                 SMALL LEFT FLOWER
+            ========================================== -->
+
+            <g
+                class="flower flower-small-left"
+                transform="translate(205 275)"
+            >
+
+                <circle
+                    class="pale"
+                    cx="0"
+                    cy="-18"
+                    r="14"
+                />
+
+                <circle
+                    class="pale"
+                    cx="17"
+                    cy="0"
+                    r="14"
+                />
+
+                <circle
+                    class="pale"
+                    cx="0"
+                    cy="18"
+                    r="14"
+                />
+
+                <circle
+                    class="pale"
+                    cx="-17"
+                    cy="0"
+                    r="14"
+                />
+
+                <circle
+                    class="center"
+                    cx="0"
+                    cy="0"
+                    r="8"
+                />
+
+            </g>
+
+
+            <!-- =========================================
+                 SMALL RIGHT FLOWER
+            ========================================== -->
+
+            <g
+                class="flower flower-small-right"
+                transform="translate(295 275)"
+            >
+
+                <circle
+                    class="pale"
+                    cx="0"
+                    cy="-18"
+                    r="14"
+                />
+
+                <circle
+                    class="pale"
+                    cx="17"
+                    cy="0"
+                    r="14"
+                />
+
+                <circle
+                    class="pale"
+                    cx="0"
+                    cy="18"
+                    r="14"
+                />
+
+                <circle
+                    class="pale"
+                    cx="-17"
+                    cy="0"
+                    r="14"
+                />
+
+                <circle
+                    class="center"
+                    cx="0"
+                    cy="0"
+                    r="8"
+                />
+
+            </g>
+
+
+            <!-- =========================================
+                 WRAPPING PAPER
+            ========================================== -->
+
+            <path
+                class="wrapper-back"
+                d="
+                    M115 360
+                    Q250 400 385 360
+
+                    L350 545
+
+                    Q250 580 150 545
+
+                    Z
+                "
+            />
+
+            <path
+                class="wrapper-front"
+                d="
+                    M130 375
+                    Q250 410 370 375
+
+                    L345 535
+
+                    Q250 565 155 535
+
+                    Z
+                "
+            />
+
+
+            <!-- =========================================
+                 RIBBON
+            ========================================== -->
+
+            <path
+                class="ribbon"
+                d="
+                    M235 415
+                    Q250 425 265 415
+
+                    L262 555
+                    Q250 570 238 555
+
+                    Z
+                "
+            />
+
+            <path
+                class="ribbon-light"
+                d="
+                    M250 430
+
+                    C210 400
+                    180 425
+                    198 450
+
+                    C213 470
+                    235 450
+                    250 430
+                "
+            />
+
+            <path
+                class="ribbon-light"
+                d="
+                    M250 430
+
+                    C290 400
+                    320 425
+                    302 450
+
+                    C287 470
+                    265 450
+                    250 430
+                "
+            />
+
+        </svg>
+
+    </div>
+
+
+    <p class="bloom-text">
+        wait for the flowers to bloom...
+    </p>
+
+
+    <!-- =================================================
+         ENVELOPE
+    ================================================== -->
+
+    <section class="envelope-section">
+
+        <div class="envelope-label">
+            there's something for you
+        </div>
+
+        <div
+            class="envelope"
+            id="envelope"
+            onclick="openLetter()"
+        >
+
+            <div class="envelope-body"></div>
+
+            <div class="letter-paper"></div>
+
+            <div class="envelope-flap"></div>
+
+            <div class="seal">
+                ♡
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         LOVE LETTER
+    ================================================== -->
+
+    <article
+        class="letter"
+        id="letter"
+    >
+
+        <h2>
+            To My Favorite Person
+        </h2>
+
+
+        <p>
+            I love you so much, Jordan. I don't think i could
+            ever fully put into words how grateful i am that
+            i get to call you mine. It's only been a month but 
+            somehow you've you've already become such a big part
+            of my life and i honestly can't imagine this past month
+            without you in it.
+        </p>
+
+
+        <p>
+            You truly are the greatest gift i could ever asked for.
+            Out of all the people i could've met, somehow i got you
+            and i don't think i'll ever stop feeling lucky about that. 
+            Having you in my life has made me feel so much more alive. 
+            Even the most normal days feel different when i have you 
+            to talk to, tell things to, laugh with, or just randomly 
+            think about. You make me happy in ways that i don't even 
+            know how to explain sometimes.
+        </p>
+
+
+        <p>
+            What i've realized is, loving you is probably the easiest 
+            thing i've ever done. I love all the things about you and us. 
+            I love our conversations, our stupid and kinky jokes, 
+            the random things we talk about, and all the little moments 
+            that probably don't seem like much but mean so much to me.
+        </p>
+
+
+        <p>
+            I can be annoying, clingy, emotional, stupid,
+            excited, quiet, or talk way too much about the most
+            useless things, and somehow you still make me feel
+            like I'm exactly where I'm supposed to be.
+        </p>
+
+
+        <p>
+            Thank you for making me feel loved. Thank you for being patient 
+            with me, for making me laugh, for listening to me, and for 
+            simply being there. Thank you for all the little things you do 
+            that you probably don't even realize i'm grateful for.
+        </p>
+
+
+        <p>
+            Thank you for making this past month one of the happiest months 
+            for me. I love you soooo so much and i'm genuinely so grateful 
+            for you. Here's to our first month, and hopefully to a whole 
+            lot more baby!
+        </p>
+          
+
+        <div class="signature">
+            forever yours,<br>
+            ♡
+        </div>
+
+
+        <button
+            class="close-button"
+            onclick="closeLetter()"
+        >
+            close letter
+        </button>
+
+    </article>
+
+</main>
+
+
+<script>
+
+/* =========================================================
+   OPEN LETTER
+========================================================= */
+
+function openLetter() {
+
+    const envelope =
+        document.getElementById("envelope");
+
+    const letter =
+        document.getElementById("letter");
+
+
+    envelope.classList.add("open");
+
+
+    setTimeout(() => {
+
+        letter.classList.add("show");
+
+    }, 700);
+
+
+    setTimeout(() => {
+
+        letter.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }, 1000);
+}
+
+
+/* =========================================================
+   CLOSE LETTER
+========================================================= */
+
+function closeLetter() {
+
+    const envelope =
+        document.getElementById("envelope");
+
+    const letter =
+        document.getElementById("letter");
+
+
+    letter.classList.remove("show");
+
+
+    setTimeout(() => {
+
+        envelope.classList.remove("open");
+
+        envelope.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }, 500);
+}
+
+</script>
+
+</body>
+</html>
